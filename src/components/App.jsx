@@ -46,13 +46,7 @@ export class App extends Component {
 
   render() {
     const { filter, contacts } = this.state;
-    const {
-      inputHandler,
-      submitHandler,
-      deleteContact,
-      filterHandler,
-      addContact,
-    } = this;
+    const { deleteContact, filterHandler, addContact } = this;
     return (
       <>
         <Section title="Phonebook">

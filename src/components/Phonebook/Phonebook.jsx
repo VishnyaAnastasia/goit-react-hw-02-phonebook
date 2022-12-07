@@ -1,4 +1,3 @@
-import { render } from '@testing-library/react';
 import { nanoid } from 'nanoid';
 import React, { Component } from 'react';
 // import styles from './Section.module.css';
