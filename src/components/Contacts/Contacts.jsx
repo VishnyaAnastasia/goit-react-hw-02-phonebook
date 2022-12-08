@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-// import styles from './Section.module.css';
+import styles from './Contacts.module.css';
 // import PropTypes from 'prop-types';
 
 export class Contacts extends Component {
@@ -14,9 +14,15 @@ export class Contacts extends Component {
               .includes(filter.trim().toLowerCase());
           })
           .map(contact => (
-            <li key={contact.id}>
-              {contact.name}:{contact.number}
-              <button onClick={deleteContact} name={contact.id}>
+            <li className={styles.contactInfo} key={contact.id}>
+              <div className={styles.contactLine}>
+                {contact.name}: {contact.number}
+              </div>
+              <button
+                className={styles.btnDelete}
+                onClick={deleteContact}
+                name={contact.id}
+              >
                 Delete
               </button>
             </li>
@@ -25,3 +31,6 @@ export class Contacts extends Component {
     );
   }
 }
+
+// Profile.propTypes = {
+// };

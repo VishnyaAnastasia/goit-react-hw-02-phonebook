@@ -1,6 +1,6 @@
 import { nanoid } from 'nanoid';
 import React, { Component } from 'react';
-// import styles from './Section.module.css';
+import styles from './Phonebook.module.css';
 // import PropTypes from 'prop-types';
 
 export class Phonebook extends Component {
@@ -31,29 +31,40 @@ export class Phonebook extends Component {
     return (
       <form onSubmit={submitHandler}>
         <label>
-          Name
+          <h3 className={styles.titleName}>Name</h3>
           <input
+            className={styles.inputView}
             onInput={inputHandler}
             type="text"
             name="name"
             pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
             title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
+            placeholder="Anastasia Vishnyakova"
             required
           />
         </label>
         <label>
-          Number
+          <h3 className={styles.titleName}>Number</h3>
           <input
+            className={styles.inputView}
             onInput={inputHandler}
             type="tel"
             name="number"
             pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
             title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
+            placeholder="555-05-55"
             required
           />
         </label>
-        <button type="submit">Add</button>
+        <div className={styles.btnConteiner}>
+          <button className={styles.btnAdd} type="submit">
+            Add
+          </button>
+        </div>
       </form>
     );
   }
 }
+
+// Profile.propTypes = {
+// };

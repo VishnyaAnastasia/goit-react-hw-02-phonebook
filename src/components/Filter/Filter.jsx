@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-// import styles from './Section.module.css';
+import styles from './Filter.module.css';
 // import PropTypes from 'prop-types';
 
 export class Filter extends Component {
@@ -7,9 +7,17 @@ export class Filter extends Component {
     const { filterHandler } = this.props;
     return (
       <label>
-        Find contacts by name
-        <input onInput={filterHandler} type="text" name="filter" />
+        <input
+          className={styles.inputView}
+          onInput={filterHandler}
+          type="text"
+          name="filter"
+          placeholder="Find contacts by name"
+        />
       </label>
     );
   }
 }
+
+// Profile.propTypes = {
+// };
