@@ -1,7 +1,6 @@
 import { nanoid } from 'nanoid';
 import React, { Component } from 'react';
 import styles from './Phonebook.module.css';
-// import PropTypes from 'prop-types';
 
 export class Phonebook extends Component {
   state = {
@@ -65,6 +64,3 @@ export class Phonebook extends Component {
     );
   }
 }
-
-// Profile.propTypes = {
-// };
